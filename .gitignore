@@ -1,0 +1,8 @@
+# Compiled executables
+*.exe
+
+# Vscode settings
+.Vscode/
+
+# Build directory
+build/
