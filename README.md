@@ -14,14 +14,14 @@ The goal of this series is to build a strong foundation in programming by unders
 
 C is a powerful general-purpose programming language widely used in:
 
-* 🖥️ Systems programming
-* ⚙️ Embedded systems
-* 💻 Operating systems
-* 🚀 High-performance applications
-* 🔌 IoT and hardware programming
-* 🧠 Computer science
-* 🎮 Game development
-* 📦 Compilers
+*  Systems programming
+*  Embedded systems
+*  Operating systems
+*  High-performance applications
+*  IoT and hardware programming
+*  Computer science
+*  Game development
+*  Compilers
 
 ---
 
