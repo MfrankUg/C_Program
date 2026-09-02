@@ -46,7 +46,7 @@ By the end of this series, I aim to be able to:
 
 ---
 
-## 🛠️ Tools & Technologies
+## Tools & Technologies
 
 | Tool                   | Purpose                 |
 | ---------------------- | ----------------------- |
@@ -214,13 +214,13 @@ By the end of this series, I aim to be able to:
 
 The knowledge gained throughout the series will be applied to practical projects such as:
 
-* 🧮 Calculator
-* 🔢 Number Guessing Game
-* 🎓 Student Management System
-* 🏦 Simple Banking System
-* 📚 Library Management System
-* 📇 Contact Management System
-* 🎮 Console-Based Games
+*  Calculator
+*  Number Guessing Game
+*  Student Management System
+*  Simple Banking System
+*  Library Management System
+*  Contact Management System
+*  Console-Based Games
 
 ---
 
@@ -271,7 +271,7 @@ C-Start-Series/
 
 ---
 
-## ▶️ How to Run
+## ▶ How to Run
 
 ### 1. Check if GCC is installed
 
@@ -325,7 +325,7 @@ Run:
 
 ---
 
-## 🧠 Learning Approach
+##  Learning Approach
 
 The series follows a simple learning cycle:
 
@@ -365,7 +365,7 @@ For every topic, I aim to:
 
 ---
 
-## 💡 Why Learn C?
+##  Why Learn C?
 
 Learning C provides a strong foundation for understanding how computers work.
 
@@ -384,7 +384,7 @@ The concepts learned in C can also make it easier to understand other programmin
 
 ---
 
-## 🤝 Contributions
+##  Contributions
 
 This repository is primarily a **personal learning journey**.
 
@@ -415,6 +415,6 @@ Makerere University 🇺🇬
 
 ---
 
-⭐ **If you find this repository useful, consider giving it a star!**
+ **If you find this repository useful, consider giving it a star!**
 
 **Happy Coding! 🚀**
