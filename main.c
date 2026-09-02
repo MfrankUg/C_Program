@@ -3,7 +3,7 @@
 
 int main(){    // the entry point of our code
     
-    printf("This is my first C");
+    printf("This is my first C \n");
     // printf -- outputs information 
     // \n breaks to the next line
     printf("Hello_world\n");
