@@ -1,5 +1,3 @@
-# C_Program
-## Basics of Programming in C 
 # C Programming — Start Series 
 
 Welcome to my **C Programming Start Series**   a hands-on journey into learning the **C programming language** from the fundamentals to more advanced concepts.
