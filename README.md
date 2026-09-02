@@ -342,7 +342,7 @@ For every topic, I aim to:
 
 ---
 
-## 📈 Progress
+##  Progress
 
 | Topic                  | Status         |
 | ---------------------- | -------------- |
@@ -417,4 +417,4 @@ Makerere University 🇺🇬
 
  **If you find this repository useful, consider giving it a star!**
 
-**Happy Coding! 🚀**
+**Happy Coding! **
