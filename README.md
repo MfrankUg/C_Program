@@ -224,7 +224,7 @@ The knowledge gained throughout the series will be applied to practical projects
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 C-Start-Series/
@@ -271,7 +271,7 @@ C-Start-Series/
 
 ---
 
-## ▶ How to Run
+##  How to Run
 
 ### 1. Check if GCC is installed
 
