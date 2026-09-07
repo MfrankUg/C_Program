@@ -1,4 +1,4 @@
-# C Programming Operators
+# 05. Operators in C Programming
 
 Operators are special symbols used in C programming to perform operations on variables, constants, and values. They tell the compiler what operation should be performed, such as **addition, subtraction, comparison, assignment, or logical evaluation**.
 
