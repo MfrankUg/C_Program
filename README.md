@@ -342,12 +342,12 @@ For every topic, I aim to:
 
 ##  Progress
 
-| Topic                  | Status         |
-| ---------------------- | -------------- |
-| Introduction to C      | 🟢 Completed   |
-| Program Structure      | 🟡 In Progress |
-| Variables & Data Types | ⚪ Upcoming     |
-| Input & Output         | ⚪ Upcoming     |
+| Topic                  | Status          |
+| ---------------------- | ---------------- |
+| Introduction to C      | 🟢 Completed    |
+| Program Structure      | 🟢 Completed    |
+| Variables & Data Types | 🟢 Completed    |
+| Input & Output         | 🟡 In Progress  |
 | Operators              | ⚪ Upcoming     |
 | Conditional Statements | ⚪ Upcoming     |
 | Loops                  | ⚪ Upcoming     |
