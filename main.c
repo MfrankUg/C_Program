@@ -17,6 +17,11 @@ int main(){    // the entry point of our code
     int d = 2;
     printf("%d\n", ++d); // Prints 3 (c becomes 3 immediately)
 
+    int e = 2;
+    printf("%d\n", e--); // Prints 2 (then c becomes 1)
+
+    int f = 2;
+    printf("%d\n", --f); // Prints 1 (c becomes 1 immediately)
 
     return 0;
 
