@@ -11,6 +11,13 @@ int main(){    // the entry point of our code
     printf("I am 20 years old\n");
     printf("I have dancing\n");
 
+    int c = 2;
+    printf("%d\n", c++); // Prints 2 (then c becomes 3)
+
+    int d = 2;
+    printf("%d\n", ++d); // Prints 3 (c becomes 3 immediately)
+
+
     return 0;
 
 }
