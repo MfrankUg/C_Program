@@ -21,6 +21,16 @@
     int value1 = 13;
     double value2 = 12.0;
     double result = value1 + value2;
-    printf("the sum of %d + %.4lf is %.4lf", value1 , value2 , result);
+    printf("the sum of %d + %.4lf is %.4lf \n", value1 , value2 , result);
+
+    // Explicit Type Conversions
+
+    int total_marks = 450;
+    int count = 5;
+
+    // Without casting: total_marks / count evaluates using integer division
+    // With explicit cast:
+    double average = (double)total_marks / count;
+    printf("%lf \n", average);
  }
  
