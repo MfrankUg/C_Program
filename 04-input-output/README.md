@@ -64,16 +64,12 @@ You can control the visual width and decimal precision of your output:
 
 Escape sequences begin with a backslash (`\`) and allow you to format layout or insert non-printable characters:
 
-| Escape Sequence | Description |
-| --- | --- |
-| `\n` | Newline (moves cursor to the next line)
-
- |
-| `\t` | Horizontal Tab (adds spacing alignment)
-
- |
-| `\\` | Prints a literal backslash `\`<br> |
-| `\"` | Prints a literal double quote `"`<br> |
+| Escape Sequence | Description                 |
+| ---  | ---                                    |
+| `\n` | Newline (moves cursor to the next line)|
+| `\t` | Horizontal Tab (adds spacing alignment)|
+| `\\` | Prints a literal backslash `\`<br>     |
+| `\"` | Prints a literal double quote `"`<br>  |
 
 ---
 
