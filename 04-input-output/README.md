@@ -1,7 +1,7 @@
 
 # 04. Input & Output
 
-Input and output (I/O) operations allow C programs to interact with users by displaying formatted information to the screen and reading input from the keyboard[cite: 3]. In standard C, these functions are provided by the Standard Input Output library (`<stdio.h>`)[cite: 3].
+Input and output (I/O) operations allow C programs to interact with users by displaying formatted information to the screen and reading input from the keyboard. In standard C, these functions are provided by the Standard Input Output library (`<stdio.h>`).
 
 ---
 
