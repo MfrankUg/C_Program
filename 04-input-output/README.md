@@ -18,7 +18,7 @@ Input and output (I/O) operations allow C programs to interact with users by dis
 
 ## 1. Formatted Output: `printf()`
 
-The `printf()` function prints formatted text and variable values to the standard output (screen)[cite: 3].
+The `printf()` function prints formatted text and variable values to the standard output (screen).
 
 ### Syntax
 ```c
