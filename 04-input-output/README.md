@@ -32,21 +32,11 @@ Format specifiers act as placeholders inside the format string, telling C how to
 
 | Specifier | Data Type | Description |
 | --- | --- | --- |
-| `%d` or `%i` | `int` | Signed decimal integer
-
- |
-| `%f` | `float` | Single-precision floating-point number
-
- |
-| `%lf` | `double` | Double-precision floating-point number
-
- |
-| `%c` | `char` | Single character
-
- |
-| `%s` | `char[]` | String / sequence of characters
-
- |
+| `%d` or `%i` | `int` | Signed decimal integer |
+| `%f` | `float` | Single-precision floating-point number|
+| `%lf` | `double` | Double-precision floating-point number|
+| `%c` | `char` | Single character|
+| `%s` | `char[]` | String / sequence of characters|
 
 ### Formatting Output Precision & Width
 
