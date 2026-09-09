@@ -24,7 +24,5 @@ int main(){
     int num7 = 12;
     int num8 = 4;
     printf("12 * 4 = %d\n", num7*num8);
-   
-   
-
+    return 0;
 }
