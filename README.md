@@ -347,8 +347,8 @@ For every topic, I aim to:
 | Introduction to C      | 🟢 Completed    |
 | Program Structure      | 🟢 Completed    |
 | Variables & Data Types | 🟢 Completed    |
-| Input & Output         | 🟡 In Progress  |
-| Operators              | ⚪ Upcoming     |
+| Input & Output         | 🟢 Completed    |
+| Operators              | 🟡 In Progress  |
 | Conditional Statements | ⚪ Upcoming     |
 | Loops                  | ⚪ Upcoming     |
 | Functions              | ⚪ Upcoming     |
