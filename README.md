@@ -349,8 +349,8 @@ For every topic, I aim to:
 | Variables & Data Types | 🟢 Completed    |
 | Input & Output         | 🟢 Completed    |
 | Operators              | 🟢 Completed    |
-| Conditional Statements | 🟡 In Progress  |
-| Loops                  | ⚪ Upcoming     |
+| Conditional Statements | 🟢 Completed    |
+| Loops                  | 🟡 In Progress  |
 | Functions              | ⚪ Upcoming     |
 | Arrays                 | ⚪ Upcoming     |
 | Strings                | ⚪ Upcoming     |
