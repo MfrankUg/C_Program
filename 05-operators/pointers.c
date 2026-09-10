@@ -1,3 +1,4 @@
+// A pointer is a variable that stores a memory address instead of a normal value.
 #include <stdio.h>
 
 int main() {
