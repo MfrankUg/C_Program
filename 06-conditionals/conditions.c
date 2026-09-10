@@ -1,4 +1,4 @@
-/* practice on a simple grading system
+/* practice on a simple grading system using if statements
 90 to 100 = A+
 80 to 89  = A
 75 to 79  = B+
