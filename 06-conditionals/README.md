@@ -189,30 +189,6 @@ Number is not divisible by 3.
 
 ---
 
-## Git Workflow
-
-To commit and push your work for this module to GitHub:
-
-```bash
-git add 06-conditionals/
-git commit -m "Add 06-conditionals notes and code examples"
-git push origin main
-```
-
----
-
-## Module Structure
-
-The module can be organized as follows:
-
-```text
-06-conditionals/
-├── README.md
-└── conditions.c
-```
-
----
-
 ## Key Takeaways
 
 After completing this module, you should understand:
