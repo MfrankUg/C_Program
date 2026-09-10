@@ -348,8 +348,8 @@ For every topic, I aim to:
 | Program Structure      | 🟢 Completed    |
 | Variables & Data Types | 🟢 Completed    |
 | Input & Output         | 🟢 Completed    |
-| Operators              | 🟡 In Progress  |
-| Conditional Statements | ⚪ Upcoming     |
+| Operators              | 🟢 Completed    |
+| Conditional Statements | 🟡 In Progress  |
 | Loops                  | ⚪ Upcoming     |
 | Functions              | ⚪ Upcoming     |
 | Arrays                 | ⚪ Upcoming     |
