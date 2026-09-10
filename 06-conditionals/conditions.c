@@ -20,7 +20,7 @@ int main(void) {
     int grade;
 
     printf("Enter your marks to be graded: ");
-    scanf("%d", &grade); // Must removed '\n' from inside scanf
+    scanf("%d", &grade); // Must remove '\n' from inside scanf to avoid an issues with left overs that might break the system.
 
     // Validate boundaries first
     if (grade < 0 || grade > 100) {
