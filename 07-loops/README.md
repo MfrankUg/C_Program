@@ -186,11 +186,3 @@ gcc -Wall -Wextra -g loops.c -o loops
 ./loops
 
 ```
-
-```bash
-# Stage, commit, and push updates
-git add 07-loops/
-git commit -m "Add 07-loops markdown documentation and source code examples"
-git push origin main
-
-```
