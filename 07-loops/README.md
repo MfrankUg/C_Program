@@ -16,10 +16,10 @@ C provides three primary loop constructs categorized by where the loop condition
 
 
 ```
-| Loop Type | Evaluation Timing | Guaranteed Executions | Primary Use Case |
-| --------- | ----------------- | --------------------- | ---------------- |
+| Loop Type    | Evaluation Timing     | Guaranteed Executions     | Primary Use Case      |
+| ---------    | -----------------        | ---------------------     | ----------------    |
 
-| **`for`** | Entry (Before body) | 0 | Fixed or known number of iterations|
+| **`for`**    | Entry (Before body) | 0 | Fixed or known number of iterations|
 | **`while`** | Entry (Before body) | 0 | Indefinite condition-based looping|
 | **`do...while`** | Exit (After body)| 1 | Interactive menus, input validation |
 
