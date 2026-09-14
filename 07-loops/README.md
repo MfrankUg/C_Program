@@ -1,4 +1,4 @@
-# 07. Loops
+# 07. Loops 
 
 Loops allow a program to execute a block of code repeatedly as long as a specified condition remains true. They eliminate repetitive code, control execution flow, and serve as the backbone for traversing data structures such as arrays and strings.
 
