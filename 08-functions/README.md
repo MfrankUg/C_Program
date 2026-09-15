@@ -72,12 +72,8 @@ int multiply(int a, int b) {
 
 | Mechanism | Description | Modifies Original Variable? |
 | --- | --- | --- |
-| **Pass by Value** | Copies the argument's value into a new memory location for the function parameter.
-
- | ❌ No |
-| **Pass by Reference** | Passes memory addresses using **pointers**, giving direct access to the original variable.
-
- | ✅ Yes |
+| **Pass by Value** | Copies the argument's value into a new memory location for the function parameter.| ❌ No |
+| **Pass by Reference** | Passes memory addresses using **pointers**, giving direct access to the original variable.| ✅ Yes |
 
 ### Code Comparison
 
