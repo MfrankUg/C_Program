@@ -28,5 +28,8 @@ int find_max(int a, int b, int c){
 }
  
 int main(){
+ 
+ int maxValue = find_max(12,2,1);
+ printf("Maximum value is %d\n",maxValue);
 
 }
