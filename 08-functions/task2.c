@@ -30,5 +30,6 @@ int main(){
  
  int maxValue = find_max(0,2,36);
  printf("Maximum value is %d\n",maxValue);
+ return 0;
 
 }
