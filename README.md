@@ -350,8 +350,8 @@ For every topic, I aim to:
 | Input & Output         | 🟢 Completed    |
 | Operators              | 🟢 Completed    |
 | Conditional Statements | 🟢 Completed    |
-| Loops                  | 🟡 In Progress  |
-| Functions              | ⚪ Upcoming     |
+| Loops                  | 🟢 Completed    |
+| Functions              | 🟡 In Progress  |
 | Arrays                 | ⚪ Upcoming     |
 | Strings                | ⚪ Upcoming     |
 | Pointers               | ⚪ Upcoming     |
