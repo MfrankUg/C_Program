@@ -14,13 +14,16 @@ and output the returned result.
 #include <stdio.h>
 
 int find_max(int a, int b, int c){
-    if(a>b && a>c){
-        printf("%d is greater than %d and d%\n",a , b , c);
+    if(a>=b && a>=c){
+        return a;
     }
-    else if(a>b && a>c){
-        printf("%d is greater than %d and d%\n",a , b , c);
+    else if(b>=a && b>=c){
+        return b;
     }
-
+    else {
+        return c;
+    }
+    
     return;
 }
  
