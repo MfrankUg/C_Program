@@ -24,12 +24,11 @@ int find_max(int a, int b, int c){
         return c;
     }
     
-    return;
 }
  
 int main(){
  
- int maxValue = find_max(12,2,1);
+ int maxValue = find_max(0,2,36);
  printf("Maximum value is %d\n",maxValue);
 
 }
