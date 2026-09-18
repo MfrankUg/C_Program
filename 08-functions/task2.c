@@ -15,10 +15,10 @@ and output the returned result.
 
 int find_max(int a, int b, int c){
     if(a>b && a>c){
-        printf("%d is greater than %d and d%\n",a , b , c)
+        printf("%d is greater than %d and d%\n",a , b , c);
     }
     else if(a>b && a>c){
-        printf("%d is greater than %d and d%\n",a , b , c)
+        printf("%d is greater than %d and d%\n",a , b , c);
     }
 
     return;
