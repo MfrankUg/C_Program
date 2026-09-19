@@ -13,3 +13,20 @@ Output
 Number: 4 | Square: 16 | Cube: 64
 
 */
+
+#include <stdio.h>
+
+void print_powers(int num);
+
+int main(){
+print_powers(3);
+
+}
+
+void print_powers(int num){
+  int square_value = num * num;
+  int cube_value = num * num * num;
+
+  printf("Number: %d | square: %d | cube: %d\n", num, square_value,cube_value);
+
+}
