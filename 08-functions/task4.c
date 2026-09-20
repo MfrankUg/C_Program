@@ -12,6 +12,6 @@ int sum_of_integers(int num){
 
 int main(){
    int num = 1246; 
-   sum_of_integers(num);
-   printf("The sum of %d = %d", num);
+   int result = sum_of_integers(num);
+   printf("The sum of %d = %d", num, result);
 }
