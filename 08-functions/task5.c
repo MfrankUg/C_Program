@@ -10,3 +10,10 @@ Task 5:
  int fibonacci(int n);
  Expected Behavior: Calling fibonacci(7) should return 13.
 */
+#include <stdio.h>
+int fibonacci(int n); // Functional Prototype
+
+int main(){
+
+
+}

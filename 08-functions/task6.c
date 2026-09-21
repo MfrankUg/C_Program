@@ -12,3 +12,4 @@ Function Prototype:
 int power(int base, int exp);
 Expected Behavior: Calling power(2, 5) should return 32.
 */
+
