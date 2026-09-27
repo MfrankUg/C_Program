@@ -1,6 +1,3 @@
-Here is the complete, raw Markdown text for your `09-arrays/README.md` file. It contains no emojis, is fully detailed, and is ready for direct copy and paste into your learning repository.
-
-```markdown
 # 09. Arrays in C
 
 An **array** is a fixed-size, contiguous collection of elements of the same data type stored sequentially in computer memory. Arrays provide an efficient mechanism for grouping and managing multiple variables under a single identifier rather than declaring separate variables individually.
