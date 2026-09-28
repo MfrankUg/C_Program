@@ -13,3 +13,19 @@ int power(int base, int exp);
 Expected Behavior: Calling power(2, 5) should return 32.
 */
 
+#include <stdio.h>
+
+int power(int base, int exp); // functional prototype 
+int main(){
+ int result = power(2,5);
+ printf("2^5; = %d\n", result);
+ return 0;
+}
+
+int power(int base, int exp){
+    //base case 
+    if (exp==0){
+        return 1;
+    }
+ return base * power(base, exp - 1); // base^exp = base * base^(exp - 1)
+}
