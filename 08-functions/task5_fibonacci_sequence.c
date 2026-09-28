@@ -1,4 +1,5 @@
 /*
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones.
 Task 5:
  Recursive Fibonacci Sequence 
  Write a recursive function fibonacci(int n) that returns the n-th Fibonacci number.
