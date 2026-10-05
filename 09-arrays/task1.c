@@ -15,7 +15,11 @@ int main(){
     int numbers[5] = {12, 45, 7, 89, 23};
     int max = numbers[0];
     for(int i = 0 ; i < 5 ; i++){
-        printf("%d\n", i);
+
+        if(numbers[i]> max){
+            max = numbers[i];
+        }
     }
+     printf("%d\n", max);
  return 0;
 }
