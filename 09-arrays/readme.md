@@ -1,329 +1,364 @@
-# 09. Arrays in C
+# Module 09: Arrays (Basic to Advanced)
 
-An **array** is a fixed-size, contiguous collection of elements of the same data type stored sequentially in computer memory. Arrays provide an efficient mechanism for grouping and managing multiple variables under a single identifier rather than declaring separate variables individually.
-
----
-
-## 1. Core Concepts & Characteristics
-
-* **Homogeneous Data:** Every element inside an array must be of the same data type (e.g., all `int`, all `float`, or all `char`).
-
-* **Contiguous Memory:** Elements are allocated in adjacent, sequential memory addresses in RAM.
-
-* **Zero-Based Indexing:** Array positions start at index `0` and run up to `size - 1`.
-
-* **Static Sizing:** In standard C, the size of a conventional array is determined at compile time and cannot be resized dynamically after allocation.
+An **array** is a fixed-size, contiguous block of memory used to store elements of the exact same data type under a single variable name.
 
 ---
 
-## 2. Memory Layout & Indexing
+## 1. Basic Concepts & One-Dimensional Arrays
 
-Because arrays are stored contiguously in memory, accessing an element via its index involves direct address arithmetic.
+### Memory Layout & Basics
 
-```text
-Array Declaration: int arr[4] = {10, 20, 30, 40};
+- **Homogeneous:** Every element must be of the same type (e.g., all `int` or all `float`).
+- **Contiguous Memory:** Elements sit adjacent to each other in RAM.
+- **Zero-Based Indexing:** Array indices run from `0` to `size - 1`.
 
-Element Index:       [0]       [1]       [2]       [3]
-Stored Value:         10        20        30        40
-Memory Address:   0x7fff00  0x7fff04  0x7fff08  0x7fff0c
-```
-
-The memory offset for any given element is calculated as:
-
-```text
-Address of arr[i] = Base Address + (i * sizeof(datatype))
-```
-
-For example, if an `int` occupies 4 bytes, moving from `arr[0]` to `arr[1]` moves 4 bytes forward in memory.
-
----
-
-## 3. One-Dimensional Arrays
-
-### Declaration and Initialization Syntax
+### Declaration and Initialization
 
 ```c
-// Declaration without initialization
-// Local arrays contain indeterminate values.
+// Declaration without initialization (contains garbage memory values)
 int numbers[5];
 
-// Declaration with explicit initialization
+// Direct initialization
 int scores[5] = {85, 90, 78, 92, 88};
 
-// Partial initialization
-// Unspecified elements are initialized to 0.
-int values[5] = {10, 20};
-// Evaluates to: {10, 20, 0, 0, 0}
+// Partial initialization (remaining elements default to 0)
+int values[5] = {10, 20}; // {10, 20, 0, 0, 0}
 
-// Universal zero-initialization
-int zeros[5] = {0};
-// Evaluates to: {0, 0, 0, 0, 0}
+// Inferred size initialization
+int data[] = {1, 2, 3, 4}; // Compiler creates size 4
+````
 
-// Implicit sizing
-// The compiler determines the size from the initializer list.
-int data[] = {1, 2, 3, 4, 5};
-// Array size automatically becomes 5
-```
-
-### Accessing and Modifying Elements
+### Accessing, Modifying, and Traversing
 
 ```c
-int arr[3] = {5, 10, 15};
-
 // Reading an element
-int x = arr[0];  // x = 5
+int first_score = scores[0]; // 85
 
 // Updating an element
-arr[1] = 50;     // arr is now {5, 50, 15}
+scores[2] = 95; // Changes 78 to 95
+
+// Calculating array element length safely
+int length = sizeof(scores) / sizeof(scores[0]);
+
+// Sequential Traversal
+for (int i = 0; i < length; i++) {
+    printf("Index %d: %d\n", i, scores[i]);
+}
 ```
 
 ---
 
-## 4. Multidimensional Arrays (2D Arrays)
+## 2. Intermediate Concepts: Multidimensional Arrays
 
-Multidimensional arrays are **arrays of arrays**. A two-dimensional (2D) array represents a grid or matrix consisting of rows and columns.
+Multidimensional arrays (arrays of arrays) represent grids, matrices, or multi-axis data tables.
 
-### Syntax and Memory Representation
+### 2D Arrays (Matrices)
+
+In RAM, 2D arrays are organized in **Row-Major Order**. Row 0 is placed sequentially in memory, followed immediately by Row 1.
 
 ```c
-// Declaration of a 2D array: 2 rows and 3 columns
+// A 2x3 matrix (2 rows, 3 columns)
 int matrix[2][3] = {
-    {1, 2, 3},  // Row 0
-    {4, 5, 6}   // Row 1
+    {1, 2, 3}, // Row 0
+    {4, 5, 6}  // Row 1
 };
 
-// Accessing row 1, column 0
-// Evaluates to 4
+// Accessing Row 1, Column 0 -> 4
 int val = matrix[1][0];
-```
 
-In physical RAM, 2D arrays are stored in **row-major order**, meaning all elements of Row 0 are placed sequentially, followed immediately by all elements of Row 1.
-
-The memory layout is conceptually:
-
-```text
-Row 0:  1  2  3
-Row 1:  4  5  6
-
-Memory order:
-1 → 2 → 3 → 4 → 5 → 6
+// Traversal via Nested Loops
+for (int r = 0; r < 2; r++) {
+    for (int c = 0; c < 3; c++) {
+        printf("%d ", matrix[r][c]);
+    }
+    printf("\n");
+}
 ```
 
 ---
 
-## 5. Array Operations Reference
+## 3. Advanced Concepts: Searching & Sorting Algorithms
 
-| Operation          | Code Snippet                    | Description                                                                    |
-| ------------------ | ------------------------------- | ------------------------------------------------------------------------------ |
-| **Access Element** | `int x = arr[i];`               | Reads the value at index `i`.                                                  |
-| **Modify Element** | `arr[i] = val;`                 | Writes `val` to index `i`.                                                     |
-| **Calculate Size** | `sizeof(arr) / sizeof(arr[0])`  | Calculates the number of elements when `arr` is an actual array in that scope. |
-| **Iterate (1D)**   | `for (int i = 0; i < len; i++)` | Sequential traversal using a single loop.                                      |
-| **Iterate (2D)**   | `for (r...) { for (c...) }`     | Grid traversal using nested loops.                                             |
+### Searching Algorithms
+
+#### Linear Search
+
+Linear search scans elements sequentially from start to end.
+
+* **Time Complexity:** `O(n)`
+
+```c
+int linear_search(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i; // Target found, return index
+        }
+    }
+
+    return -1; // Target not found
+}
+```
+
+#### Binary Search
+
+Binary search efficiently locates an item in a **pre-sorted array** by repeatedly dividing the search interval in half.
+
+* **Time Complexity:** `O(log n)`
+
+```c
+int binary_search(int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == target) {
+            return mid; // Found
+        }
+
+        if (arr[mid] < target) {
+            low = mid + 1; // Search right half
+        } else {
+            high = mid - 1; // Search left half
+        }
+    }
+
+    return -1; // Target not found
+}
+```
 
 ---
 
-## 6. Complete Implementation Example
+### Sorting Algorithms
 
-Save the following source code to:
+#### Bubble Sort
+
+Bubble sort compares adjacent elements and swaps them if they are in the wrong order until the array is sorted.
+
+* **Time Complexity:** `O(n²)`
+
+```c
+void bubble_sort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+```
+
+#### Selection Sort
+
+Selection sort repeatedly finds the minimum element from the unsorted region and places it at the beginning.
+
+* **Time Complexity:** `O(n²)`
+
+```c
+void selection_sort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        int min_idx = i;
+
+        for (int j = i + 1; j < size; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
+
+        // Swap lowest element found with first unsorted element
+        int temp = arr[min_idx];
+        arr[min_idx] = arr[i];
+        arr[i] = temp;
+    }
+}
+```
+
+---
+
+## 4. Low-Level Memory Mechanics & Pitfalls
+
+### Address Arithmetic
+
+When an array element `arr[i]` is evaluated, the computer calculates its address using a standard byte-offset formula:
+
+$$
+\text{Address of } arr[i] =
+\text{Base Address} +
+(i \times \text{sizeof}(\text{datatype}))
+$$
+
+For example, if an `int` occupies 4 bytes:
 
 ```text
-09-arrays/arrays.c
+arr[0] → Base Address + (0 × 4)
+arr[1] → Base Address + (1 × 4)
+arr[2] → Base Address + (2 × 4)
 ```
+
+### Array Decay to Pointers
+
+When an array name is passed into a function, it **decays into a pointer** to its first element.
+
+Therefore, `sizeof(arr)` inside a receiving function measures the **pointer size** (commonly 4 or 8 bytes) rather than the full array size.
+
+Always pass the array size as a separate parameter:
+
+```c
+void print_array(int arr[], int size) {
+    // Use size to know how many elements are in the array
+}
+```
+
+### Out-of-Bounds Access (Buffer Overflow)
+
+C does **not** perform bounds checking on array indices.
+
+For an array:
+
+```c
+int numbers[5];
+```
+
+Valid indices are:
+
+```text
+0, 1, 2, 3, 4
+```
+
+This is invalid:
+
+```c
+numbers[5];
+```
+
+Accessing `arr[size]` reads or writes beyond the reserved memory block and can result in:
+
+* Garbage or unexpected data
+* Memory corruption
+* Segmentation faults
+* Undefined behavior
+
+---
+
+## Complete Implementation
+
+### `09-arrays/arrays.c`
+
+Save the following code in `09-arrays/arrays.c` to test array traversal, searching, and sorting:
 
 ```c
 #include <stdio.h>
 
-int main(void) {
-
-    // 1. One-Dimensional Array Traversal and Operations
-
-    int grades[5] = {85, 90, 78, 92, 88};
-
-    int total_elements = sizeof(grades) / sizeof(grades[0]);
-
-    int sum = 0;
-
-    printf("=== 1D Array Traversal ===\n");
-
-    for (int i = 0; i < total_elements; i++) {
-        printf("Element at index %d = %d\n", i, grades[i]);
-        sum += grades[i];
+void print_array(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
     }
 
-    double average = (double)sum / total_elements;
+    printf("\n");
+}
 
-    printf("Sum: %d | Average: %.2f\n\n", sum, average);
+void bubble_sort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
 
+int binary_search(int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
 
-    // 2. Two-Dimensional Array Grid Traversal
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
 
-    printf("=== 2D Array Traversal (3x3 Matrix) ===\n");
-
-    int matrix[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-
-    for (int row = 0; row < 3; row++) {
-
-        for (int col = 0; col < 3; col++) {
-            printf("%d ", matrix[row][col]);
+        if (arr[mid] == target) {
+            return mid;
         }
 
-        printf("\n");
+        if (arr[mid] < target) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+
+    return -1;
+}
+
+int main(void) {
+    int data[] = {64, 34, 25, 12, 22, 11, 90};
+    int size = sizeof(data) / sizeof(data[0]);
+
+    printf("Original array: ");
+    print_array(data, size);
+
+    // Sorting
+    bubble_sort(data, size);
+
+    printf("Sorted array:   ");
+    print_array(data, size);
+
+    // Searching
+    int target = 22;
+    int index = binary_search(data, size, target);
+
+    if (index != -1) {
+        printf(
+            "Element %d found at sorted index %d\n",
+            target,
+            index
+        );
+    } else {
+        printf("Element %d not found\n", target);
     }
 
     return 0;
 }
 ```
 
-### Expected Output
-
-```text
-=== 1D Array Traversal ===
-Element at index 0 = 85
-Element at index 1 = 90
-Element at index 2 = 78
-Element at index 3 = 92
-Element at index 4 = 88
-Sum: 433 | Average: 86.60
-
-=== 2D Array Traversal (3x3 Matrix) ===
-1 2 3
-4 5 6
-7 8 9
-```
-
 ---
 
-## 7. Common Pitfalls and Best Practices
+## Terminal Workflow
 
-### Buffer Overflow / Out-of-Bounds Access
-
-C does not perform automatic bounds checking on array indices.
-
-Accessing an index outside the valid range `0` to `size - 1` results in **undefined behavior**, which can lead to memory corruption or a segmentation fault.
-
-```c
-int arr[5];
-
-arr[5] = 100;  // UNSAFE: Valid indices are 0 through 4!
-```
-
-The valid indices are:
-
-```text
-arr[0]
-arr[1]
-arr[2]
-arr[3]
-arr[4]
-```
-
----
-
-### Uninitialized Local Arrays
-
-Arrays declared inside functions without explicit initialization contain **indeterminate values**.
-
-For example:
-
-```c
-int numbers[5];
-```
-
-Do not read from the elements until you have assigned valid values to them.
-
-A safer approach is:
-
-```c
-int numbers[5] = {0};
-```
-
-This initializes all elements to zero.
-
-> **Note:** Objects with static storage duration are initialized differently; the warning above specifically concerns ordinary uninitialized local arrays.
-
----
-
-### Array Decay to Pointers
-
-When an array is passed to a function, the array expression generally **decays into a pointer** to its first element.
-
-For example:
-
-```c
-int numbers[5] = {10, 20, 30, 40, 50};
-```
-
-When passed to a function:
-
-```c
-print_array(numbers);
-```
-
-the function receives a pointer to the first element.
-
-Therefore, you normally need to pass the array length separately:
-
-```c
-void print_array(int arr[], int size);
-```
-
-or:
-
-```c
-void print_array(int *arr, int size);
-```
-
-Inside such a function, `sizeof(arr)` does **not** give the size of the original array because `arr` is treated as a pointer parameter.
-
----
-
-## 8. Compilation and Execution
-
-Use GCC to compile the program with strict warning diagnostics.
-
-### Navigate to the Module Folder
+Run the following commands to compile and execute your code:
 
 ```bash
 cd 09-arrays
-```
-
-### Compile the Source Code
-
-```bash
-gcc -Wall -Wextra -g arrays.c -o arrays
-```
-
-### Execute the Program
-
-On Linux or macOS:
-
-```bash
+gcc -Wall -Wextra arrays.c -o arrays
 ./arrays
 ```
 
-On Windows using MinGW:
+### Expected Output
 
-```bash
-arrays.exe
+```text
+Original array: 64 34 25 12 22 11 90
+Sorted array:   11 12 22 25 34 64 90
+Element 22 found at sorted index 2
 ```
 
 ---
 
-## Quick Summary
+## Key Takeaways
 
-| Concept         | Key Point                                                                    |
-| --------------- | ---------------------------------------------------------------------------- |
-| **Array**       | Stores multiple values of the same data type.                                |
-| **Indexing**    | Starts at `0`.                                                               |
-| **1D Array**    | Uses one index, e.g. `arr[2]`.                                               |
-| **2D Array**    | Uses row and column indices, e.g. `matrix[1][2]`.                            |
-| **Memory**      | Array elements are stored contiguously.                                      |
-| **Size**        | `sizeof(arr) / sizeof(arr[0])` works for an actual array in its scope.       |
-| **Traversal**   | Usually performed using `for` loops.                                         |
-| **Safety**      | Never access an index outside the valid range.                               |
-| **Array Decay** | Arrays passed to functions generally become pointers to their first element. |
+* Arrays store multiple values of the **same data type**.
+* Array indexing starts at **0**.
+* Array elements are stored in **contiguous memory**.
+* `sizeof(array) / sizeof(array[0])` can determine the number of elements when the array is in the same scope.
+* A 2D array is essentially an **array of arrays**.
+* **Linear Search:** `O(n)`
+* **Binary Search:** `O(log n)` on a sorted array.
+* **Bubble Sort:** `O(n²)`
+* **Selection Sort:** `O(n²)`
+* Arrays passed to functions **decay into pointers**.
+* C does not automatically prevent **out-of-bounds access**.
+
