@@ -351,8 +351,8 @@ For every topic, I aim to:
 | Operators              | 🟢 Completed    |
 | Conditional Statements | 🟢 Completed    |
 | Loops                  | 🟢 Completed    |
-| Functions              | 🟡 In Progress  |
-| Arrays                 | ⚪ Upcoming     |
+| Functions              | 🟢 Completed    |
+| Arrays                 | 🟡 In Progress  |
 | Strings                | ⚪ Upcoming     |
 | Pointers               | ⚪ Upcoming     |
 | Structures & Unions    | ⚪ Upcoming     |
