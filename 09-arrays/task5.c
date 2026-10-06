@@ -24,4 +24,5 @@ int odd_count = 0;
  }
 printf("Even numbers are : %d \n",even_count);
 printf("Odd numbers are : %d \n",odd_count);
+return 0;
 }
