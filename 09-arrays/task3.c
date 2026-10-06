@@ -15,3 +15,18 @@ C
 double average = (double)sum / 5;
 Print both the total sum and average formatted to 2 decimal places (%.2f).
 */
+
+#include<stdio.h>
+int main(){
+ int arr[5] = {10, 20, 30, 40, 50};
+ int sum = 0;
+ 
+ for (int i = 0 ; i < 5; i++){
+    
+   sum += arr[i];
+ }
+
+ printf("Sum: %d \n", sum); 
+ double average = (double)sum/5; 
+ printf("Average: %.2f\n",average);
+}
