@@ -16,4 +16,12 @@ int main(){
  int arr[6] = {20, 5, 10, 9, 23, 12};
  int min = arr[0];
 
+  for(int i = 0 ; i < 6 ; i++){
+    //printf("%d \n", i);
+    if(arr[i]< min){
+     min = arr[i]; 
+    }
+  }
+printf("%d \n", min);
+ return 0; 
 }
