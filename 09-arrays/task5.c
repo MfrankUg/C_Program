@@ -7,5 +7,21 @@ Declare an integer array of size 6 with test values (e.g., {12, 7, 9, 24, 18, 5}
 
 Declare two counter variables: even_count = 0 and odd_count = 0.
 
-Use a for loop running from index 0 to 5 (i < 6) to iterate through the array.
 */
+
+#include<stdio.h>
+int main(){
+int digits[6] = {12, 7, 9, 24, 18, 5};
+int even_count = 0 ;
+int odd_count = 0;
+ for(int i = 0 ; i < 6; i++){
+    if( digits[i] %2 == 0){
+        digits[i] = even_count++;
+    }
+    else{
+        odd_count ++;
+    }
+ }
+printf("Even numbers are : %d \n",even_count);
+printf("Odd numbers are : %d \n",odd_count);
+}
