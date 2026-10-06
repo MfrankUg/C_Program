@@ -16,7 +16,7 @@ int even_count = 0 ;
 int odd_count = 0;
  for(int i = 0 ; i < 6; i++){
     if( digits[i] %2 == 0){
-        digits[i] = even_count++;
+        even_count++;
     }
     else{
         odd_count ++;
