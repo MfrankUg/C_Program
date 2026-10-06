@@ -1,17 +1,12 @@
 /*
-Task 2: Calculate the Sum and Average of Array Elements
-Write a C program that calculates both the sum and the average of all values in an array.
+Task 1: Find the Maximum Element in an Array
+Write a simple C program in your 09-arrays/ task1.c file that finds and prints the maximum value in an integer array.
 
 Requirements
-Declare an integer array of size 5 with test values (e.g., {10, 20, 30, 40, 50}).
+Declare an integer array of size 5 with any values (e.g., {12, 45, 7, 89, 23}).
 
-Declare an integer variable sum initialized to 0.
+Iterate through the array using a for loop.
 
-Use a for loop running from index 0 to 4 (i < 5) to iterate through the array and accumulate each element into sum.
+Print the highest number found in the array.
 
-Compute the average as a floating-point number (double or float) using explicit type casting:
-
-C
-double average = (double)sum / 5;
-Print both the total sum and average formatted to 2 decimal places (%.2f).
 */
