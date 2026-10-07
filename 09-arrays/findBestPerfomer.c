@@ -20,7 +20,7 @@ int main(){
    int marks[8] = {72, 55, 81, 40, 66, 93, 48, 75};
    printf("Highest mark : %d \n", findHighest(marks , 8));
    printf("Lowest marks: %d \n", findLowest(marks, 8));
-   printf("average of  marks: %d \n", countAboveAverage(marks, 8));
+   printf("Number of average count of  marks above average: %d \n", countAboveAverage(marks, 8));
     return 0;
 }
 
@@ -47,10 +47,20 @@ int findLowest(int marks[8], int size) {
 }
 
 int countAboveAverage(int marks[8], int size) {
-     int sum; 
+     int sum = 0; 
+     float average;
+     int count = 0; 
      for(int i = 0; i < size ; i++){
       sum += marks[i];
      }
- return sum / size;
+      average = (float)sum / size;
+
+       for(int i = 0 ; i < size ; i++){
+      
+     if(marks[i]> average ){
+        count++; 
+       }
+       }
+return count;
        
 }
