@@ -21,6 +21,7 @@ int main(){
    printf("Highest mark : %d \n", findHighest(marks , 8));
    printf("Lowest marks: %d \n", findLowest(marks, 8));
    printf("Number of average count of  marks above average: %d \n", countAboveAverage(marks, 8));
+   printf("index of the highest marks : %d \n", indexOfHighest(marks, 8));
     return 0;
 }
 
@@ -63,4 +64,18 @@ int countAboveAverage(int marks[8], int size) {
        }
 return count;
        
+}
+
+int indexOfHighest(int marks[8], int size) {
+    int highest = marks[0];
+    int index = 0;
+
+    for (int i = 0; i < size; i++) {
+        if (marks[i] > highest) {
+            highest = marks[i];
+            index = i;
+        }
+    }
+
+    return index;
 }
