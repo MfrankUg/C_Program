@@ -22,7 +22,7 @@ int main(){
    printf("Lowest marks: %d \n", findLowest(marks, 8));
    printf("Number of average count of  marks above average: %d \n", countAboveAverage(marks, 8));
    printf("index of the highest marks : %d \n", indexOfHighest(marks, 8));
-    return 0;
+   return 0;
 }
 
 int findHighest(int marks[8], int size){
