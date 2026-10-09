@@ -10,3 +10,24 @@ Write a nested for loop that uses scanf() to take scores from the user to fill t
 Write another nested for loop that prints the matrix in neat row/column format.
 
 */
+#include <stdio.h>
+#define STUDENT 3
+#define TEST 4
+
+int main(){
+   int scores[STUDENT][TEST];
+   for (int row = 0; row < STUDENT; row ++){
+    for(int col = 0; col < TEST; col++){
+        printf("Enter element at row %d  and column %d : \n", row , col);
+        scanf("%d", &scores[row][col]); 
+    }
+   } 
+   printf("\n ======= Matrix output ======\n");
+   for(int row = 0 ; row < STUDENT; row ++){
+   for(int col = 0; col < TEST; col++){
+   printf(" %d ", scores[row][col]);
+    }
+    printf("\n");
+  }
+  return 0; 
+}
