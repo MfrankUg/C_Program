@@ -32,18 +32,49 @@ int sum = 0;
     }
     return (double)sum / TEST;
 }
-double testAverage(const int marks[STUDENT][TEST], int index){
+double testAverage(const int marks[STUDENT][TEST]), int index{
 int sum = 0;
     for (int i = 0; i < STUDENT; i++) {
         sum += marks[i][index];
     }
     return (double)sum / STUDENT;
 }
-int bestStudent(){
+int bestStudent(const int marks[STUDENT][TEST]){
+int bestIndex = 0;
+    double highestAvg = studentAverage(marks, 0);
 
+    for (int i = 1; i < STUDENT; i++) {
+        double currentAvg = studentAverage(marks, i);
+        if (currentAvg > highestAvg) {
+            highestAvg = currentAvg;
+            bestIndex = i;
+        }
+    }
+
+    return bestIndex;
 
 }
 int main(){
+int marks[STUDENT][TEST] = {
+        {70, 60, 80},
+        {55, 67, 72},
+        {90, 84, 88},
+        {40, 50, 45}
+    };
+
+    printf("=== Student Averages ===\n");
+    for (int i = 0; i < STUDENT; i++) {
+        printf("Student %d Average: %.2f\n", i + 1, studentAverage(marks, i));
+    }
+
+    printf("\n=== Test Averages ===\n");
+    for (int j = 0; j < TEST; j++) {
+        printf("Test %d Average: %.2f\n", j + 1, testAverage(marks, j));
+    }
+
+    int best = bestStudent(marks);
+    printf("\n Best Student: Student %d (Row Index %d) with Average: %.2f \n", 
+           best + 1, best, studentAverage(marks, best));
 
     return 0;
 }
