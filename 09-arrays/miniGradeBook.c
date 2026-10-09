@@ -32,7 +32,7 @@ int sum = 0;
     }
     return (double)sum / TEST;
 }
-double testAverage(const int marks[STUDENT][TEST]), int index{
+double testAverage(const int marks[STUDENT][TEST], int index){
 int sum = 0;
     for (int i = 0; i < STUDENT; i++) {
         sum += marks[i][index];
