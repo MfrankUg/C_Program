@@ -10,3 +10,25 @@ Write bestStudent() to return the row index of the student with the highest aver
 Display every student's average and identify the best student
 
 */
+
+#include <stdio.h>
+#define STUDENT 4
+#define TEST 3
+
+void readMarks(const int marks[STUDENT][TEST], int index){
+
+}
+double studentAverage(const int marks[STUDENT][TEST], int index){
+
+}
+double testAverage(const int marks[STUDENT][TEST], int index){
+
+}
+int bestStudent(){
+
+
+}
+int main(){
+
+    return 0;
+}
