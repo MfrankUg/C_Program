@@ -15,11 +15,22 @@ Display every student's average and identify the best student
 #define STUDENT 4
 #define TEST 3
 
-void readMarks(const int marks[STUDENT][TEST], int index){
+void readMarks(int marks[STUDENT][TEST]){
+    for (int i = 0; i < STUDENT; i++) {
+        printf("Enter %d test marks for Student %d:\n", TEST, i + 1);
+        for (int j = 0; j < TEST; j++) {
+            printf("  Test %d: ", j + 1);
+            scanf("%d", &marks[i][j]);
+        }
+    }
 
 }
 double studentAverage(const int marks[STUDENT][TEST], int index){
-
+int sum = 0;
+    for (int j = 0; j < TEST; j++) {
+        sum += marks[index][j];
+    }
+    return (double)sum / TEST;
 }
 double testAverage(const int marks[STUDENT][TEST], int index){
 
