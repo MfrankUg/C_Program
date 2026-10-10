@@ -17,3 +17,33 @@ Implement a function named findMaxTemperature() that searches the entire 2D arra
 
 In main(), call your functions to populate the grid, display each city's average temperature, and print the overall highest temperature found.
 */
+
+#include <stdio.h>
+#define CITIES 3
+#define DAYS 4
+
+void readTemperature(double temperatureData[CITIES][DAYS]){
+    // Entering data
+   for (int row = 0; row < CITIES; row++){
+    for (int col = 0; col < DAYS; col++){
+      printf("Enter the row %d and col %d\n",row , col);
+      scanf("%lf",&temperatureData[row][col]);
+    } 
+   }
+   printf("\n Temperature Records:\n");
+   // Printing info
+   for (int row = 0; row < CITIES; row++){
+    for (int col = 0; col < DAYS; col++){
+      //printf("Enter the row %d and col %d\n",row , col);
+      printf("%d",&temperatureData[row][col]);
+    } 
+   }
+
+ 
+}
+
+int main(){
+   double temperatureData[CITIES][DAYS];
+   readTemperature(temperatureData); 
+    return 0; 
+}
