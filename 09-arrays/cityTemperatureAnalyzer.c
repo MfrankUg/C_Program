@@ -26,25 +26,37 @@ void readTemperature(double temperatureData[CITIES][DAYS]){
     // Entering data
    for (int row = 0; row < CITIES; row++){
     for (int col = 0; col < DAYS; col++){
-      printf("Enter the row %d and col %d\n",row , col);
+      printf("Enter the City %d and temperature %d\n",row + 1 , col + 1);
       scanf("%lf",&temperatureData[row][col]);
     } 
    }
    printf("\n Temperature Records:\n");
    // Printing info
    for (int row = 0; row < CITIES; row++){
+     printf("Enter the City %d: \n",row + 1 );
     for (int col = 0; col < DAYS; col++){
       //printf("Enter the row %d and col %d\n",row , col);
       printf("%.1lf \t",temperatureData[row][col]);
     } 
+      printf("\n");
    }
    printf("\n");
 
  
 }
 
+double cityAverage(double temperatureData[CITIES][DAYS], int city){
+       int sum = 0; 
+       for(int day = 0; day< DAYS; day++){
+       sum += temperatureData[city][day]; 
+    }
+    return sum / DAYS; 
+}
+
 int main(){
    double temperatureData[CITIES][DAYS];
    readTemperature(temperatureData); 
-    return 0; 
+   
+   printf("%f \n",cityAverage(temperatureData,0)); 
+   return 0; 
 }
