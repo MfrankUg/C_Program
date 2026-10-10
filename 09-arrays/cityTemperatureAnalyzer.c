@@ -35,9 +35,10 @@ void readTemperature(double temperatureData[CITIES][DAYS]){
    for (int row = 0; row < CITIES; row++){
     for (int col = 0; col < DAYS; col++){
       //printf("Enter the row %d and col %d\n",row , col);
-      printf("%d",&temperatureData[row][col]);
+      printf("%.1lf \t",temperatureData[row][col]);
     } 
    }
+   printf("\n");
 
  
 }
