@@ -70,5 +70,7 @@ int main(){
    readTemperature(temperatureData); 
    
    printf("%f \n",cityAverage(temperatureData,0)); 
+   double highest = findMaxTemperature(temperatureData);
+   printf("Highest temperature recorded: %.1f\n", highest);
    return 0; 
 }
