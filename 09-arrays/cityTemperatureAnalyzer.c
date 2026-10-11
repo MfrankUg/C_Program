@@ -52,7 +52,9 @@ double cityAverage(double temperatureData[CITIES][DAYS], int city){
     }
     return sum / DAYS; 
 }
+ double findMaxTemperature(double temperatureData[CITIES][DAYS] ) {
 
+ }
 int main(){
    double temperatureData[CITIES][DAYS];
    readTemperature(temperatureData); 
