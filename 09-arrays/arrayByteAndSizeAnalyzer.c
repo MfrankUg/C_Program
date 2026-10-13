@@ -21,12 +21,28 @@ Iterate and Print: Use a for loop bounded by your calculated size variable to pr
 */
 
 #include <stdio.h>
-int main(){
-   float arr[] = {60,50,45,59,66,70};
-   float totalSize= sizeof(arr);
-   printf("Size of arr[] is :%.1lf \n",totalSize);
-   float sizeOfEle= sizeof(arr[0]);
-   printf("Size of elements of arr[] is :%.1lf \n", sizeOfEle);
-    float numOfElem= sizeof(arr)/sizeof(arr[0]);
-   printf("Size of all elements of arr[] is :%.1lf", numOfElem);
+
+int main(void) {
+    float arr[] = {60.5, 50.0, 45.2, 59.8, 66.1, 70.4};
+
+    // 1. Calculate total size in bytes (use size_t or int)
+    size_t totalSize = sizeof(arr);
+    printf("Total size of arr[] is: %zu bytes\n", totalSize);
+
+    // 2. Calculate size of a single element in bytes
+    size_t sizeOfEle = sizeof(arr[0]);
+    printf("Size of a single element is: %zu bytes\n", sizeOfEle);
+
+    // 3. Calculate exact number of elements
+    int numOfElem = sizeof(arr) / sizeof(arr[0]);
+    printf("Total number of elements is: %d\n\n", numOfElem);
+
+    // 4. Iterate and print each element using the calculated size
+    printf("Array elements: ");
+    for (int i = 0; i < numOfElem; i++) {
+        printf("%.1f ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
 }
