@@ -19,10 +19,13 @@ int main(){
         score[j] = score[j+1];
         score[j+1] = temp;
        }
-       //printf(" %d",score[i]);
      }
+     for(int k = 0; k < size; k++){
+      printf(" %d", score[k]);
+     }
+     printf("\n");
     }
-
+    printf("Final sorting\n");
     // output
     for(int k=0; k < size; k++){
      printf(" %d",score[k]);
